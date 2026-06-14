@@ -4,7 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This repository contains the official implementation of the paper **"Continuous Action Deep Reinforcement Learning for Residential Home Energy Management Systems"** (Applied Soft Computing Journal). The code provides a complete framework for training and evaluating continuous-action DRL algorithms (SAC, TD3, ACKTR) for home energy management systems (HEMS).
+This repository contains the official implementation of the paper **"Continuous Action Deep Reinforcement Learning for Residential Home Energy Management Systems"** . The code provides a complete framework for training and evaluating continuous-action DRL algorithms (SAC, TD3, ACKTR) for home energy management systems (HEMS).
 
 ## 📋 Overview
 
