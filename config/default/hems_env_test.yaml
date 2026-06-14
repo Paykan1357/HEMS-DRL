@@ -1,0 +1,61 @@
+name: hems_env_test
+env_type: HEMS
+continuous: true
+data:
+  data_dir: C:/Users/a/Desktop/new papers in cs/smart home/dataset
+  filename: hems_12month_dataset(time).csv
+  start_date: '2024-01-01 00:00:00'
+  end_date: '2024-12-31 23:00:00'
+  freq: H
+  train_ratio: 0.8
+  split: test
+observation:
+  window_length: 24
+  include_previous_action: true
+  include_time_encoding: true
+time:
+  delta_t: 1.0
+battery:
+  capacity_kwh: 10.0
+  p_bat_max_kw: 5.0
+  soc_min: 0.1
+  soc_max: 0.9
+  soc_init: 0.5
+thermal:
+  T_set: 22.0
+action_space:
+  type: continuous
+  dim: 5
+  names:
+  - bat
+  - grid
+  - pv
+  - load
+  - idle
+  low:
+  - -1.0
+  - -1.0
+  - 0.0
+  - -1.0
+  - 0.0
+  high:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+reward:
+  lambda_T: 2.0
+  lambda_deg: 0.05
+  lambda_uns: 5.0
+  lambda_sw: 1.0
+  lambda_pv: 0.5
+evaluation:
+  max_steps: null
+  random_start: false
+  seed: 123
+logging:
+  log_reward_components: true
+  log_soc: true
+  log_actions: true
+  save_trajectories: true
